@@ -20,7 +20,7 @@ jobs:
         with:
           generator: go
           openapi-file: openapi.yaml
-          command-args:  --skip-validate-spec --git-user-id upbothq --git-repo-id upbot-go-sdk
+          command-args: -o . --skip-validate-spec --git-user-id upbothq --git-repo-id upbot-go-sdk
 
       - name: Commit & Push
         run: |

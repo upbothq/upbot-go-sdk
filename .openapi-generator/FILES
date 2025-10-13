@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -25,5 +24,4 @@ model_store_a_newly_created_resource_in_storage_201_response.go
 model_store_a_newly_created_resource_in_storage_request.go
 model_store_a_newly_created_resource_in_storage_request_bot.go
 response.go
-test/api_monitor_management_test.go
 utils.go

@@ -93,7 +93,7 @@ func NewConfiguration() *Configuration {
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
-				URL: "api.upbot.app",
+				URL: "https://api.upbot.app",
 				Description: "No description provided",
 			},
 		},

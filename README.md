@@ -74,7 +74,7 @@ ctx = context.WithValue(context.Background(), upbot.ContextOperationServerVariab
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.upbot.app*
+All URIs are relative to *https://api.upbot.app*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

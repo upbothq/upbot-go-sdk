@@ -1,6 +1,6 @@
 # \MonitorManagementAPI
 
-All URIs are relative to *http://api.upbot.app*
+All URIs are relative to *https://api.upbot.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -31,7 +31,7 @@ import (
 )
 
 func main() {
-	id := "0199d5d6-c417-71a2-9aa1-576f812c24b7" // string | The ID of the monitor.
+	id := "019875ab-234e-7248-b6db-c37b7e0d8aad" // string | The ID of the monitor.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)

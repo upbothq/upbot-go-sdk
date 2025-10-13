@@ -4,7 +4,7 @@ info:
   title: upbot API Documentation
   version: 1.0.0
 servers:
-- url: api.upbot.app
+- url: https://api.upbot.app
 security:
 - default: []
 tags:
@@ -58,7 +58,7 @@ paths:
       - description: The ID of the monitor.
         examples:
           default:
-            value: 0199d5d6-c417-71a2-9aa1-576f812c24b7
+            value: 019875ab-234e-7248-b6db-c37b7e0d8aad
         explode: false
         in: path
         name: id
@@ -93,7 +93,7 @@ paths:
     - description: The ID of the monitor.
       examples:
         default:
-          value: 0199d5d6-c417-71a2-9aa1-576f812c24b7
+          value: 019875ab-234e-7248-b6db-c37b7e0d8aad
       explode: false
       in: path
       name: id

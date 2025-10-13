@@ -4,7 +4,7 @@ info:
   description: ""
   version: 1.0.0
 servers:
-  - url: api.upbot.app
+  - url: https://api.upbot.app
 tags:
   - name: Monitor Management
     description: |-
@@ -42,11 +42,11 @@ paths:
                         id:
                           type: string
                           examples:
-                            - 0199d909-edde-71fc-8adf-298148de5ee8
+                            - 0199dd47-e8c0-7302-852f-4e19ba21dfc5
                         display_name:
                           type: string
                           examples:
-                            - Beatty-Kuhic Monitor
+                            - Hauck Ltd Monitor
                         type:
                           type: string
                           examples:
@@ -54,11 +54,11 @@ paths:
                         target:
                           type: string
                           examples:
-                            - http://halvorson.biz/quo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem
+                            - https://ankunding.info/ullam-inventore-sit-praesentium-omnis-libero-tempora.html
                         interval:
                           type: integer
                           examples:
-                            - 300
+                            - 60
                         status:
                           type: string
                           examples:
@@ -70,41 +70,41 @@ paths:
                         avatar_url:
                           type: string
                           examples:
-                            - https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http%3A%2F%2Fhalvorson.biz%2Fquo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem&size=128
+                            - https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fankunding.info%2Fullam-inventore-sit-praesentium-omnis-libero-tempora.html&size=128
                         created_at:
                           type: string
                           examples:
-                            - 2025-10-12T15:28:50.000000Z
+                            - 2025-10-13T11:15:01.000000Z
                         updated_at:
                           type: string
                           examples:
-                            - 2025-10-12T15:28:50.000000Z
+                            - 2025-10-13T11:15:01.000000Z
                         bot:
                           type: string
                           examples:
                             - null
                     examples:
-                      - - id: 0199d909-edde-71fc-8adf-298148de5ee8
-                          display_name: Beatty-Kuhic Monitor
+                      - - id: 0199dd47-e8c0-7302-852f-4e19ba21dfc5
+                          display_name: Hauck Ltd Monitor
                           type: http
-                          target: http://halvorson.biz/quo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem
-                          interval: 300
+                          target: https://ankunding.info/ullam-inventore-sit-praesentium-omnis-libero-tempora.html
+                          interval: 60
                           status: online
                           retry_count: 0
-                          avatar_url: https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http%3A%2F%2Fhalvorson.biz%2Fquo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem&size=128
-                          created_at: 2025-10-12T15:28:50.000000Z
-                          updated_at: 2025-10-12T15:28:50.000000Z
+                          avatar_url: https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fankunding.info%2Fullam-inventore-sit-praesentium-omnis-libero-tempora.html&size=128
+                          created_at: 2025-10-13T11:15:01.000000Z
+                          updated_at: 2025-10-13T11:15:01.000000Z
                           bot: null
-                        - id: 0199d909-edeb-705d-a4be-c5ee7952842d
-                          display_name: Weimann, Grimes and Torphy Monitor
+                        - id: 0199dd47-e8ce-7118-8d4a-64ce52728c3d
+                          display_name: Fahey and Sons Monitor
                           type: ping
-                          target: http://www.reichert.com/
-                          interval: 30
+                          target: http://hermann.com/qui-nostrum-facilis-harum-vel-rerum-consequatur-molestiae-amet.html
+                          interval: 60
                           status: unknown
                           retry_count: 0
                           avatar_url: ""
-                          created_at: 2025-10-12T15:28:50.000000Z
-                          updated_at: 2025-10-12T15:28:50.000000Z
+                          created_at: 2025-10-13T11:15:01.000000Z
+                          updated_at: 2025-10-13T11:15:01.000000Z
                           bot: null
                   links:
                     type: object
@@ -154,27 +154,27 @@ paths:
                           - 2
                 examples:
                   - data:
-                      - id: 0199d909-edde-71fc-8adf-298148de5ee8
-                        display_name: Beatty-Kuhic Monitor
+                      - id: 0199dd47-e8c0-7302-852f-4e19ba21dfc5
+                        display_name: Hauck Ltd Monitor
                         type: http
-                        target: http://halvorson.biz/quo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem
-                        interval: 300
+                        target: https://ankunding.info/ullam-inventore-sit-praesentium-omnis-libero-tempora.html
+                        interval: 60
                         status: online
                         retry_count: 0
-                        avatar_url: https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http%3A%2F%2Fhalvorson.biz%2Fquo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem&size=128
-                        created_at: 2025-10-12T15:28:50.000000Z
-                        updated_at: 2025-10-12T15:28:50.000000Z
+                        avatar_url: https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fankunding.info%2Fullam-inventore-sit-praesentium-omnis-libero-tempora.html&size=128
+                        created_at: 2025-10-13T11:15:01.000000Z
+                        updated_at: 2025-10-13T11:15:01.000000Z
                         bot: null
-                      - id: 0199d909-edeb-705d-a4be-c5ee7952842d
-                        display_name: Weimann, Grimes and Torphy Monitor
+                      - id: 0199dd47-e8ce-7118-8d4a-64ce52728c3d
+                        display_name: Fahey and Sons Monitor
                         type: ping
-                        target: http://www.reichert.com/
-                        interval: 30
+                        target: http://hermann.com/qui-nostrum-facilis-harum-vel-rerum-consequatur-molestiae-amet.html
+                        interval: 60
                         status: unknown
                         retry_count: 0
                         avatar_url: ""
-                        created_at: 2025-10-12T15:28:50.000000Z
-                        updated_at: 2025-10-12T15:28:50.000000Z
+                        created_at: 2025-10-13T11:15:01.000000Z
+                        updated_at: 2025-10-13T11:15:01.000000Z
                         bot: null
                     links:
                       first: /?page=1
@@ -236,7 +236,7 @@ paths:
                     - http
                     - ping
                   examples:
-                    - http
+                    - ping
                 target:
                   type: string
                   description: This field is required unless <code>type</code> is in
@@ -337,4 +337,4 @@ paths:
           type: string
         examples:
           default:
-            value: 0199d5d6-c417-71a2-9aa1-576f812c24b7
+            value: 019875ab-234e-7248-b6db-c37b7e0d8aad

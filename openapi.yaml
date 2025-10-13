@@ -1,0 +1,340 @@
+openapi: 3.1.1
+info:
+  title: upbot API Documentation
+  description: ""
+  version: 1.0.0
+servers:
+  - url: api.upbot.app
+tags:
+  - name: Monitor Management
+    description: |-
+      
+      APIs for managing monitors
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: You can retrieve your token by visiting your dashboard and clicking
+        <b>Generate API token</b>.
+security:
+  - default: []
+paths:
+  /api/monitors:
+    get:
+      summary: Display a listing of the resource.
+      operationId: displayAListingOfTheResource
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          examples:
+                            - 0199d909-edde-71fc-8adf-298148de5ee8
+                        display_name:
+                          type: string
+                          examples:
+                            - Beatty-Kuhic Monitor
+                        type:
+                          type: string
+                          examples:
+                            - http
+                        target:
+                          type: string
+                          examples:
+                            - http://halvorson.biz/quo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem
+                        interval:
+                          type: integer
+                          examples:
+                            - 300
+                        status:
+                          type: string
+                          examples:
+                            - online
+                        retry_count:
+                          type: integer
+                          examples:
+                            - 0
+                        avatar_url:
+                          type: string
+                          examples:
+                            - https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http%3A%2F%2Fhalvorson.biz%2Fquo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem&size=128
+                        created_at:
+                          type: string
+                          examples:
+                            - 2025-10-12T15:28:50.000000Z
+                        updated_at:
+                          type: string
+                          examples:
+                            - 2025-10-12T15:28:50.000000Z
+                        bot:
+                          type: string
+                          examples:
+                            - null
+                    examples:
+                      - - id: 0199d909-edde-71fc-8adf-298148de5ee8
+                          display_name: Beatty-Kuhic Monitor
+                          type: http
+                          target: http://halvorson.biz/quo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem
+                          interval: 300
+                          status: online
+                          retry_count: 0
+                          avatar_url: https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http%3A%2F%2Fhalvorson.biz%2Fquo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem&size=128
+                          created_at: 2025-10-12T15:28:50.000000Z
+                          updated_at: 2025-10-12T15:28:50.000000Z
+                          bot: null
+                        - id: 0199d909-edeb-705d-a4be-c5ee7952842d
+                          display_name: Weimann, Grimes and Torphy Monitor
+                          type: ping
+                          target: http://www.reichert.com/
+                          interval: 30
+                          status: unknown
+                          retry_count: 0
+                          avatar_url: ""
+                          created_at: 2025-10-12T15:28:50.000000Z
+                          updated_at: 2025-10-12T15:28:50.000000Z
+                          bot: null
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        examples:
+                          - /?page=1
+                      last:
+                        type: string
+                        examples:
+                          - null
+                      prev:
+                        type: string
+                        examples:
+                          - null
+                      next:
+                        type: string
+                        examples:
+                          - null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        examples:
+                          - 1
+                      current_page_url:
+                        type: string
+                        examples:
+                          - /?page=1
+                      from:
+                        type: integer
+                        examples:
+                          - 1
+                      path:
+                        type: string
+                        examples:
+                          - /
+                      per_page:
+                        type: string
+                        examples:
+                          - "15"
+                      to:
+                        type: integer
+                        examples:
+                          - 2
+                examples:
+                  - data:
+                      - id: 0199d909-edde-71fc-8adf-298148de5ee8
+                        display_name: Beatty-Kuhic Monitor
+                        type: http
+                        target: http://halvorson.biz/quo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem
+                        interval: 300
+                        status: online
+                        retry_count: 0
+                        avatar_url: https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http%3A%2F%2Fhalvorson.biz%2Fquo-consequatur-at-voluptates-nemo-non-eligendi-fugit-voluptatem&size=128
+                        created_at: 2025-10-12T15:28:50.000000Z
+                        updated_at: 2025-10-12T15:28:50.000000Z
+                        bot: null
+                      - id: 0199d909-edeb-705d-a4be-c5ee7952842d
+                        display_name: Weimann, Grimes and Torphy Monitor
+                        type: ping
+                        target: http://www.reichert.com/
+                        interval: 30
+                        status: unknown
+                        retry_count: 0
+                        avatar_url: ""
+                        created_at: 2025-10-12T15:28:50.000000Z
+                        updated_at: 2025-10-12T15:28:50.000000Z
+                        bot: null
+                    links:
+                      first: /?page=1
+                      last: null
+                      prev: null
+                      next: null
+                    meta:
+                      current_page: 1
+                      current_page_url: /?page=1
+                      from: 1
+                      path: /
+                      per_page: "15"
+                      to: 2
+      tags:
+        - Monitor Management
+      security: []
+    post:
+      summary: Store a newly created resource in storage.
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ""
+      parameters: []
+      responses:
+        "201":
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    examples:
+                      - 0199d811-f889-7130-a91f-62fd291c06d6
+                examples:
+                  - id: 0199d811-f889-7130-a91f-62fd291c06d6
+      tags:
+        - Monitor Management
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: This field is required unless <code>type</code> is in
+                    <code>discord_bot</code>. Must not be greater than 255
+                    characters.
+                  nullable: false
+                  examples:
+                    - b
+                type:
+                  type: string
+                  description: ""
+                  nullable: false
+                  enum:
+                    - discord_bot
+                    - http
+                    - ping
+                  examples:
+                    - http
+                target:
+                  type: string
+                  description: This field is required unless <code>type</code> is in
+                    <code>discord_bot</code>. Must not be greater than 255
+                    characters.
+                  nullable: false
+                  examples:
+                    - n
+                retry_count:
+                  type:
+                    - integer
+                    - "null"
+                  description: This field is required unless <code>type</code> is in
+                    <code>discord_bot</code>. Must be at least 0. Must not be
+                    greater than 10.
+                  examples:
+                    - 7
+                interval:
+                  type: string
+                  description: This field is required unless <code>type</code> is in
+                    <code>discord_bot</code>.
+                  nullable: false
+                  enum:
+                    - "30"
+                    - "60"
+                    - "120"
+                    - "300"
+                    - "600"
+                  examples:
+                    - "30"
+                bot:
+                  type: object
+                  description: This field is required when <code>type</code> is
+                    <code>discord_bot</code>.
+                  nullable: false
+                  properties:
+                    discord_bot_id:
+                      type: string
+                      description: This field is required when <code>type</code> is
+                        <code>discord_bot</code>. Must match the regex
+                        /^\d{17,19}$/.
+                      nullable: false
+                      examples:
+                        - "56425593142326822"
+                    discord_guild_id:
+                      type: string
+                      description: This field is required when <code>type</code> is
+                        <code>discord_bot</code>. Must match the regex
+                        /^\d{17,19}$/.
+                      nullable: false
+                      examples:
+                        - "56425593142326822"
+                  examples:
+                    - null
+              required:
+                - type
+      security: []
+  /api/monitors/{id}:
+    delete:
+      summary: Delete a specific monitor.
+      operationId: deleteASpecificMonitor
+      description: Deletes the given monitor if the user is authorized.
+      parameters: []
+      responses:
+        "204":
+          description: Successful deletion
+          content:
+            text/plain:
+              schema:
+                type: string
+                examples:
+                  - No content.
+        "403":
+          description: Unauthorized
+          content:
+            text/plain:
+              schema:
+                type: string
+                examples:
+                  - User is not allowed to delete this monitor.
+        "404":
+          description: Not found
+          content:
+            text/plain:
+              schema:
+                type: string
+                examples:
+                  - Monitor does not exist.
+      tags:
+        - Monitor Management
+      security: []
+    parameters:
+      - in: path
+        name: id
+        description: The ID of the monitor.
+        required: true
+        schema:
+          type: string
+        examples:
+          default:
+            value: 0199d5d6-c417-71a2-9aa1-576f812c24b7

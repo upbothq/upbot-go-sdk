@@ -13,6 +13,7 @@ docs/MonitorManagementAPI.md
 docs/StoreANewlyCreatedResourceInStorage201Response.md
 docs/StoreANewlyCreatedResourceInStorageRequest.md
 docs/StoreANewlyCreatedResourceInStorageRequestBot.md
+docs/UpdateTheSpecifiedResourceInStorageRequest.md
 git_push.sh
 go.mod
 go.sum
@@ -23,5 +24,6 @@ model_display_a_listing_of_the_resource_200_response_meta.go
 model_store_a_newly_created_resource_in_storage_201_response.go
 model_store_a_newly_created_resource_in_storage_request.go
 model_store_a_newly_created_resource_in_storage_request_bot.go
+model_update_the_specified_resource_in_storage_request.go
 response.go
 utils.go

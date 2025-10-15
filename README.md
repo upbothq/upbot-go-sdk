@@ -81,6 +81,7 @@ Class | Method | HTTP request | Description
 *MonitorManagementAPI* | [**DeleteASpecificMonitor**](docs/MonitorManagementAPI.md#deleteaspecificmonitor) | **Delete** /api/monitors/{id} | Delete a specific monitor.
 *MonitorManagementAPI* | [**DisplayAListingOfTheResource**](docs/MonitorManagementAPI.md#displayalistingoftheresource) | **Get** /api/monitors | Display a listing of the resource.
 *MonitorManagementAPI* | [**StoreANewlyCreatedResourceInStorage**](docs/MonitorManagementAPI.md#storeanewlycreatedresourceinstorage) | **Post** /api/monitors | Store a newly created resource in storage.
+*MonitorManagementAPI* | [**UpdateTheSpecifiedResourceInStorage**](docs/MonitorManagementAPI.md#updatethespecifiedresourceinstorage) | **Put** /api/monitors/{id} | Update the specified resource in storage.
 
 
 ## Documentation For Models
@@ -92,6 +93,7 @@ Class | Method | HTTP request | Description
  - [StoreANewlyCreatedResourceInStorage201Response](docs/StoreANewlyCreatedResourceInStorage201Response.md)
  - [StoreANewlyCreatedResourceInStorageRequest](docs/StoreANewlyCreatedResourceInStorageRequest.md)
  - [StoreANewlyCreatedResourceInStorageRequestBot](docs/StoreANewlyCreatedResourceInStorageRequestBot.md)
+ - [UpdateTheSpecifiedResourceInStorageRequest](docs/UpdateTheSpecifiedResourceInStorageRequest.md)
 
 
 ## Documentation For Authorization

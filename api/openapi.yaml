@@ -1,4 +1,4 @@
-openapi: 3.1.1
+openapi: 3.0.3
 info:
   description: ""
   title: upbot API Documentation
@@ -56,9 +56,7 @@ paths:
       operationId: deleteASpecificMonitor
       parameters:
       - description: The ID of the monitor.
-        examples:
-          default:
-            value: 019875ab-234e-7248-b6db-c37b7e0d8aad
+        example: 0199e183-bc6a-70ac-9477-e28061a54bc2
         explode: false
         in: path
         name: id
@@ -71,149 +69,187 @@ paths:
           content:
             text/plain:
               schema:
+                example: No content.
                 type: string
           description: Successful deletion
         "403":
           content:
             text/plain:
               schema:
+                example: User is not allowed to delete this monitor.
                 type: string
           description: Unauthorized
         "404":
           content:
             text/plain:
               schema:
+                example: Monitor does not exist.
                 type: string
           description: Not found
       security: []
       summary: Delete a specific monitor.
       tags:
       - Monitor Management
-    parameters:
-    - description: The ID of the monitor.
-      examples:
-        default:
-          value: 019875ab-234e-7248-b6db-c37b7e0d8aad
-      explode: false
-      in: path
-      name: id
-      required: true
-      schema:
-        type: string
-      style: simple
+    put:
+      description: ""
+      operationId: updateTheSpecifiedResourceInStorage
+      parameters:
+      - description: The ID of the monitor.
+        example: 0199e183-bc6a-70ac-9477-e28061a54bc2
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/updateTheSpecifiedResourceInStorage_request"
+        required: false
+      responses: {}
+      security: []
+      summary: Update the specified resource in storage.
+      tags:
+      - Monitor Management
 components:
   schemas:
     displayAListingOfTheResource_200_response_data_inner:
-      example:
-        avatar_url: avatar_url
-        updated_at: updated_at
-        bot: bot
-        retry_count: 6
-        created_at: created_at
-        interval: 0
-        id: id
-        display_name: display_name
-        type: type
-        target: target
-        status: status
       properties:
         id:
+          example: 0199e513-e0f6-7021-9aad-13cd8f5c7765
           type: string
         display_name:
+          example: Pagac-Pacocha Monitor
           type: string
         type:
+          example: ping
           type: string
         target:
+          example: http://www.bradtke.net/alias-eveniet-ut-aut-qui-deserunt-sunt
           type: string
         interval:
+          example: 30
           type: integer
         status:
+          example: online
           type: string
         retry_count:
+          example: 0
           type: integer
         avatar_url:
+          example: ""
           type: string
         created_at:
+          example: 2025-10-14T23:35:09.000000Z
           type: string
         updated_at:
+          example: 2025-10-14T23:35:09.000000Z
           type: string
         bot:
           type: string
+          example: null
+      type: object
     displayAListingOfTheResource_200_response_links:
-      example:
-        next: next
-        last: last
-        prev: prev
-        first: first
       properties:
         first:
+          example: /?page=1
           type: string
         last:
           type: string
+          example: null
         prev:
           type: string
+          example: null
         next:
           type: string
+          example: null
+      type: object
     displayAListingOfTheResource_200_response_meta:
-      example:
-        current_page_url: current_page_url
-        path: path
-        per_page: per_page
-        from: 5
-        to: 5
-        current_page: 1
       properties:
         current_page:
+          example: 1
           type: integer
         current_page_url:
+          example: /?page=1
           type: string
         from:
+          example: 1
           type: integer
         path:
+          example: /
           type: string
         per_page:
+          example: "15"
           type: string
         to:
+          example: 2
           type: integer
+      type: object
     displayAListingOfTheResource_200_response:
       example:
         data:
-        - avatar_url: avatar_url
-          updated_at: updated_at
-          bot: bot
-          retry_count: 6
-          created_at: created_at
-          interval: 0
-          id: id
-          display_name: display_name
-          type: type
-          target: target
-          status: status
-        - avatar_url: avatar_url
-          updated_at: updated_at
-          bot: bot
-          retry_count: 6
-          created_at: created_at
-          interval: 0
-          id: id
-          display_name: display_name
-          type: type
-          target: target
-          status: status
-        meta:
-          current_page_url: current_page_url
-          path: path
-          per_page: per_page
-          from: 5
-          to: 5
-          current_page: 1
+        - id: 0199e513-e0f6-7021-9aad-13cd8f5c7765
+          display_name: Pagac-Pacocha Monitor
+          type: ping
+          target: http://www.bradtke.net/alias-eveniet-ut-aut-qui-deserunt-sunt
+          interval: 30
+          status: online
+          retry_count: 0
+          avatar_url: ""
+          created_at: 2025-10-14T23:35:09.000000Z
+          updated_at: 2025-10-14T23:35:09.000000Z
+          bot: null
+        - id: 0199e513-e103-704d-8acb-a45131a61553
+          display_name: Gutmann and Sons Monitor
+          type: http
+          target: http://www.swaniawski.org/aliquam-dolor-sed-quia-qui-sint
+          interval: 30
+          status: online
+          retry_count: 0
+          avatar_url: "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http%3A%2F%2Fwww.swaniawski.org%2Faliquam-dolor-sed-quia-qui-sint&size=128"
+          created_at: 2025-10-14T23:35:09.000000Z
+          updated_at: 2025-10-14T23:35:09.000000Z
+          bot: null
         links:
-          next: next
-          last: last
-          prev: prev
-          first: first
+          first: /?page=1
+          last: null
+          prev: null
+          next: null
+        meta:
+          current_page: 1
+          current_page_url: /?page=1
+          from: 1
+          path: /
+          per_page: "15"
+          to: 2
       properties:
         data:
+          example:
+          - id: 0199e513-e0f6-7021-9aad-13cd8f5c7765
+            display_name: Pagac-Pacocha Monitor
+            type: ping
+            target: http://www.bradtke.net/alias-eveniet-ut-aut-qui-deserunt-sunt
+            interval: 30
+            status: online
+            retry_count: 0
+            avatar_url: ""
+            created_at: 2025-10-14T23:35:09.000000Z
+            updated_at: 2025-10-14T23:35:09.000000Z
+            bot: null
+          - id: 0199e513-e103-704d-8acb-a45131a61553
+            display_name: Gutmann and Sons Monitor
+            type: http
+            target: http://www.swaniawski.org/aliquam-dolor-sed-quia-qui-sint
+            interval: 30
+            status: online
+            retry_count: 0
+            avatar_url: "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http%3A%2F%2Fwww.swaniawski.org%2Faliquam-dolor-sed-quia-qui-sint&size=128"
+            created_at: 2025-10-14T23:35:09.000000Z
+            updated_at: 2025-10-14T23:35:09.000000Z
+            bot: null
           items:
             $ref: "#/components/schemas/displayAListingOfTheResource_200_response_data_inner"
           type: array
@@ -221,49 +257,109 @@ components:
           $ref: "#/components/schemas/displayAListingOfTheResource_200_response_links"
         meta:
           $ref: "#/components/schemas/displayAListingOfTheResource_200_response_meta"
+      type: object
     storeANewlyCreatedResourceInStorage_201_response:
       example:
-        id: id
+        id: 0199d811-f889-7130-a91f-62fd291c06d6
       properties:
         id:
+          example: 0199d811-f889-7130-a91f-62fd291c06d6
           type: string
-    storeANewlyCreatedResourceInStorage_request_bot:
-      description: This field is required when <code>type</code> is <code>discord_bot</code>.
-      properties:
-        discord_bot_id:
-          description: "This field is required when <code>type</code> is <code>discord_bot</code>.\
-            \ Must match the regex /^\\d{17,19}$/."
-          type: string
-          nullable: false
-        discord_guild_id:
-          description: "This field is required when <code>type</code> is <code>discord_bot</code>.\
-            \ Must match the regex /^\\d{17,19}$/."
-          type: string
-          nullable: false
-      nullable: false
-    storeANewlyCreatedResourceInStorage_request:
+      type: object
+    updateTheSpecifiedResourceInStorage_request:
       properties:
         name:
-          description: This field is required unless <code>type</code> is in <code>discord_bot</code>.
-            Must not be greater than 255 characters.
-          type: string
+          description: Must not be greater than 255 characters.
+          example: b
           nullable: false
+          type: string
+        target:
+          description: Must not be greater than 500 characters.
+          example: "n"
+          nullable: true
+          type: string
+        interval:
+          description: ""
+          enum:
+          - "30"
+          - "60"
+          - "120"
+          - "300"
+          - "600"
+          example: "60"
+          nullable: false
+          type: string
+        retry_count:
+          description: Must be at least 0. Must not be greater than 10.
+          example: 7
+          nullable: true
+          type: integer
+        is_active:
+          description: ""
+          example: true
+          nullable: false
+          type: boolean
         type:
           description: ""
           enum:
           - discord_bot
           - http
           - ping
-          type: string
+          example: ping
           nullable: false
+          type: string
+        bot:
+          description: ""
+          items:
+            type: string
+          type: array
+          example: null
+      type: object
+    storeANewlyCreatedResourceInStorage_request_bot:
+      description: This field is required when <code>type</code> is <code>discord_bot</code>.
+      nullable: false
+      properties:
+        discord_bot_id:
+          description: "This field is required when <code>type</code> is <code>discord_bot</code>.\
+            \ Must match the regex /^\\d{17,19}$/."
+          example: "56425593142326822"
+          nullable: false
+          type: string
+        discord_guild_id:
+          description: "This field is required when <code>type</code> is <code>discord_bot</code>.\
+            \ Must match the regex /^\\d{17,19}$/."
+          example: "56425593142326822"
+          nullable: false
+          type: string
+      type: object
+      example: null
+    storeANewlyCreatedResourceInStorage_request:
+      properties:
+        name:
+          description: This field is required unless <code>type</code> is in <code>discord_bot</code>.
+            Must not be greater than 255 characters.
+          example: b
+          nullable: false
+          type: string
+        type:
+          description: ""
+          enum:
+          - discord_bot
+          - http
+          - ping
+          example: http
+          nullable: false
+          type: string
         target:
           description: This field is required unless <code>type</code> is in <code>discord_bot</code>.
             Must not be greater than 255 characters.
-          type: string
+          example: "n"
           nullable: false
+          type: string
         retry_count:
           description: This field is required unless <code>type</code> is in <code>discord_bot</code>.
             Must be at least 0. Must not be greater than 10.
+          example: 7
           nullable: true
           type: integer
         interval:
@@ -274,12 +370,14 @@ components:
           - "120"
           - "300"
           - "600"
-          type: string
+          example: "30"
           nullable: false
+          type: string
         bot:
           $ref: "#/components/schemas/storeANewlyCreatedResourceInStorage_request_bot"
       required:
       - type
+      type: object
   securitySchemes:
     default:
       description: You can retrieve your token by visiting your dashboard and clicking

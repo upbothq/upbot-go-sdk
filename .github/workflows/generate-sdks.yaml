@@ -19,7 +19,7 @@ jobs:
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator: go
-          openapi-file: openapi.yaml
+          openapi-url: https://docs.upbot.app/docs.openapi
           command-args: -o . --skip-validate-spec --git-user-id upbothq --git-repo-id upbot-go-sdk  --additional-properties=packageName=upbot
 
       - name: Commit & Push
